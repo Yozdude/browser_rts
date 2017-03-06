@@ -1,0 +1,23 @@
+{
+  "name": "browser_rts",
+  "version": "1.0.0",
+  "description": "Test platform for creating a simple in-browser RTS using GUN db",
+  "main": "index.js",
+  "dependencies": {
+    "gun": "^0.6.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yozdude/browser_rts.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yozdude/browser_rts/issues"
+  },
+  "homepage": "https://github.com/Yozdude/browser_rts#readme"
+}
