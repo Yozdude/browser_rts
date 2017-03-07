@@ -1,8 +1,10 @@
 var canvas = document.getElementById("gameCanvas"),
-	ctx = canvas.getContext("2d"),
-	width = canvas.width,
-	height = canvas.height,
-	FPS = 30;
+    ctx = canvas.getContext("2d"),
+    width = canvas.width,
+    height = canvas.height,
+    FPS = 30;
+
+setupEventListeners(canvas);
 
 setInterval(function() {
   update();
@@ -14,9 +16,7 @@ function update() {
 }
 
 function draw() {
-	// Clear the canvas
-	ctx.fillStyle = "#000";
-	ctx.fillRect(0, 0, width, height);
-
-
+  // Clear the canvas
+  ctx.fillStyle = "#000";
+  ctx.fillRect(0, 0, width, height);
 }
