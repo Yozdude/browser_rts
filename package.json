@@ -4,6 +4,7 @@
   "description": "Test platform for creating a simple in-browser RTS using GUN db",
   "main": "index.js",
   "dependencies": {
+    "express": "^4.15.2",
     "gun": "^0.6.3"
   },
   "devDependencies": {},
