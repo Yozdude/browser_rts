@@ -1,32 +1,31 @@
 function onMouseMove (canvas, event, mousePos) {
-  localPlayerState.mouseX = mousePos.x;
-  localPlayerState.mouseY = mousePos.y;
+  localPlayerState.mousePos = mousePos;
 }
 
 function onMouseDown (canvas, event, mousePos) {
-  localPlayerState.mouseX = mousePos.x;
-  localPlayerState.mouseY = mousePos.y;
+  localPlayerState.mousePos = mousePos;
   var isRightButton = isRightMouseButton (event);
 
   if (!isRightButton) {
-    localPlayerState.leftMouseDown = true;
+    localPlayerState.leftMouseDown = { x: mousePos.x, y: mousePos.y };
+    localPlayerState.leftMouseDownNew = true;
   } else {
-    localPlayerState.rightMouseDown = true;
+    localPlayerState.rightMouseDown = { x: mousePos.x, y: mousePos.y };
+    localPlayerState.rightMouseDownNew = true;
   }
-  console.log(localPlayerState);
 }
 
 function onMouseUp (canvas, event, mousePos) {
-  localPlayerState.mouseX = mousePos.x;
-  localPlayerState.mouseY = mousePos.y;
+  localPlayerState.mousePos = mousePos;
   var isRightButton = isRightMouseButton (event);
 
   if (!isRightButton) {
-    localPlayerState.leftMouseDown = false;
+    localPlayerState.leftMouseDown = undefined;
+    localPlayerState.leftMouseDownNew = true;
   } else {
-    localPlayerState.rightMouseDown = false;
+    localPlayerState.rightMouseDown = undefined;
+    localPlayerState.rightMouseDownNew = true;
   }
-  console.log(localPlayerState);
 }
 
 function setupEventListeners (canvas) {

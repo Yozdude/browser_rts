@@ -1,3 +1,8 @@
+// Disable the right-click menu
+window.oncontextmenu = function () {
+    return false;
+}
+
 function getMousePosOnCanvas (canvas, event) {
   var rect = canvas.getBoundingClientRect();
   return {
@@ -14,6 +19,15 @@ function isRightMouseButton (event) {
   }
 }
 
-window.oncontextmenu = function () {
-    return false;
+function cornersToRect (cornerA, cornerB) {
+  var minX = Math.min(cornerA.x, cornerB.x),
+      maxX = Math.max(cornerA.x, cornerB.x),
+      minY = Math.min(cornerA.y, cornerB.y),
+      maxY = Math.max(cornerA.y, cornerB.y);
+  return {
+    x: minX,
+    y: minY,
+    width: maxX - minX,
+    height: maxY - minY
+  };
 }

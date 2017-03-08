@@ -1,6 +1,7 @@
 var localPlayerState = {
-  leftMouseDown: false,
-  rightMouseDown: false,
-  mouseX: 0,
-  mouseY: 0
+  leftMouseDown: undefined,
+  leftMouseDownNew: false,
+  rightMouseDown: undefined,
+  rightMouseDownNew: false,
+  mousePos: { x: 0, y: 0 }
 }
